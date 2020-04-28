@@ -1,0 +1,38 @@
+﻿<Window x:Class="DocsClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DocsClient"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="31*"/>
+            <ColumnDefinition Width="167*"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Connect"
+                HorizontalAlignment="Left"
+                Margin="162,45,0,0"
+                VerticalAlignment="Top"
+                Width="56"
+                Click="Connect_Click" RenderTransformOrigin="0.581,1.061" Grid.Column="1" Height="20"/>
+        <Label Content="Info" HorizontalAlignment="Left" Margin="314,42,0,0" VerticalAlignment="Top" Name="StatusLabel" RenderTransformOrigin="0.003,0.919" Grid.Column="1" Height="26" Width="117"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="20,45,0,0" TextWrapping="Wrap" Text="127.0.0.1" VerticalAlignment="Top" Width="144" Name="IPField" Grid.ColumnSpan="2" TextChanged="IPField_TextChanged"/>
+        <TextBox HorizontalAlignment="Left" Height="36" Margin="20,93,0,0" TextWrapping="Wrap" Text =" " VerticalAlignment="Top" Width="173" Name="ToSend" Grid.ColumnSpan="2" TextChanged="ToSend_TextChanged"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="70,45,0,0" TextWrapping="Wrap" Text="11111" VerticalAlignment="Top" Width="66" x:Name="PortField" Grid.Column="1" TextChanged="PortField_TextChanged"/>
+        <Button Content="Stop"
+            HorizontalAlignment="Left"
+            Margin="223,45,0,0"
+            VerticalAlignment="Top"
+            Width="56"
+            Click="Stop_Click" RenderTransformOrigin="0.581,1.061" Grid.Column="1" Height="20"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="274" Margin="118,93,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="524" Name="ToReceive"/>
+        <Button Content="Send"
+            HorizontalAlignment="Left"
+            Margin="46,195,0,0"
+            VerticalAlignment="Top"
+            Width="54"
+            Click="Send_Click" RenderTransformOrigin="0.581,1.061" Grid.Column="1" Height="20"/>
+    </Grid>
+</Window>
